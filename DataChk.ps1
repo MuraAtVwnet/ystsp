@@ -272,3 +272,18 @@ foreach( $EmployeeData in $AllEmployees ){
 }
 
 $ErrorEmployees | Set-Content -Path (Join-Path $DataPath "従業員エラーData.txt") -Encoding utf8
+
+
+
+<#
+# Get Script
+$TergetDirectory = "C:\DataCheck"
+$PSFullName = Join-Path $TergetDirectory "DataChk.ps1"
+if( -not (Test-Path $TergetDirectory)){mkdir $TergetDirectory}
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/MuraAtVwnet/ystsp/master/DataChk.ps1 -OutFile $PSFullName
+Invoke-Item $TergetDirectory
+
+# Execute Script
+. "C:\DataCheck\DataChk.ps1"
+#>
+
