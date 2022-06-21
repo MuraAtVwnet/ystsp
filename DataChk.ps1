@@ -276,6 +276,9 @@ $ErrorEmployees | Set-Content -Path (Join-Path $DataPath "従業員エラーData
 
 
 <#
+# Pre Setting
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Force
+
 # Get Script
 $TergetDirectory = "C:\DataCheck"
 $PSFullName = Join-Path $TergetDirectory "DataChk.ps1"
