@@ -1,4 +1,4 @@
-﻿Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Force
+﻿Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
 $TergetDirectory = "C:\DataCheck"
 $PSFullName = Join-Path $TergetDirectory "DataChk.ps1"
 if( -not (Test-Path $TergetDirectory)){mkdir $TergetDirectory}
@@ -9,5 +9,3 @@ $Shortcut.TargetPath = $TergetDirectory
 $Shortcut.Save()
 Invoke-Item $TergetDirectory
 clsoe
-
-# Invoke-Expression "& { $(Invoke-RestMethod https://raw.githubusercontent.com/MuraAtVwnet/ystsp/master/install.ps1) }"
