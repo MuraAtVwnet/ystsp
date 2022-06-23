@@ -1,4 +1,5 @@
-﻿Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+﻿
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
 $TergetDirectory = "C:\DataCheck"
 $PSFullName = Join-Path $TergetDirectory "DataChk.ps1"
 if( -not (Test-Path $TergetDirectory)){mkdir $TergetDirectory}
