@@ -16,3 +16,5 @@ $Shortcut.Save()
 # Open directory
 Invoke-Item $TergetDirectory
 
+
+# Invoke-Expression "& { $(Invoke-RestMethod https://raw.githubusercontent.com/MuraAtVwnet/ystsp/master/install.ps1) }"
